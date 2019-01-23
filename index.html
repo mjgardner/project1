@@ -7,24 +7,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />  
+
     <title>Who's Calling Me?</title>
 </head>
 <body>
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h1 class="display-4">Fluid jumbotron</h1>
-                  <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                  <h1 class="display-4">Who's Calling YOU?</h1>
                 </div>
               </div>
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <form id="enterNumber">
+        <div class="form-group" id="unknownnumber">
+          <label for="InputPhoneNumber" id="phonenumberlabel">Enter Phone Number Here: </label>
+          <input type="text" id="exampleInputPhoneNumber" placeholder="Phone Number">
+          <button type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <div id="ResultsOutput">
+        <h2>Results: </h2>
+      </div>
+
+      <div id="TopScoresOutput">
+        <h2>Top Scores: </h2>
+      </div>
+
     </div>
 </body>
 </html>
