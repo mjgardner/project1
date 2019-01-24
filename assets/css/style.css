@@ -2,6 +2,11 @@
 
 .jumbotron {
     text-align: center;
+    height: 180px;
+}
+
+#enterNumber {
+    border: 1px solid rgb(62, 77, 77);
 }
 
 #unknownnumber {
@@ -11,9 +16,7 @@
 }
 
 #phonenumberlabel {
-    font-size: 40px;
-    margin-bottom: 0px;
-    height: 75px;
+    font-size: 45px;
 }
 
 #exampleInputPhoneNumber {
@@ -32,10 +35,83 @@
 
 #ResultsOutput, #TopScoresOutput {
     border: 1px solid darkcyan;
+    margin-bottom: 25px;
+    height: 500px;
 }
 
 h2 {
     border: 1px solid darkcyan;
-    padding-left: 10px;
+    padding-left: 50px;
+    margin: -1px;
+}
+
+#results {
+    padding-left: 30px;
+}
+
+#countrybox {
+        background-color: lightblue;
+        margin: 10px;
+        width: 45%;
+        height: 130;
+}
+
+#categorytypebox {
+    background-color: rgb(49, 218, 85);
+    margin: 0px 10px 10px 10px;
+    height: 185px;
+    width: 45%;
+}
+
+#linetypebox {
+    background-color: rgb(219, 241, 91);
+    height: 95;
+    margin: 0px 0px 10px 10px;
+    width: 45%;
+}
+
+#volumereportscorebox {
+    background-color: rgb(248, 116, 215);
+    height: 210;
+    margin: 10px;
+    width: 50%;
+    position: relative;
+    left: 510px;
+    top: -440;
+}
+
+#scorereputationbox {
+    background-color: rgb(247, 174, 80);
+    margin: 10px;
+    height: 210;
+    width: 50%;
+    position: relative;
+    left: 510px;
+    top: -440;
+}
+
+#TopScoresOutput {
+    margin-bottom: 40px;
+}
+
+.subname {
+    padding-left: 475px;
+}
+
+#savedscores {
+    margin-top: 25px;
+    background-color: rgb(32, 21, 126);
+}
+
+th {
+    color: white;
+}
+
+#savedphonenumber {
+    padding-left: 60px;
+}
+
+#savedscore {
+    padding-right: 55px;
 }
 

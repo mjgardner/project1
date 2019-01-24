@@ -27,13 +27,30 @@
       </form>
 
       <div id="ResultsOutput">
-        <h2>Results: </h2>
-            <br> <br> <br>
+        <h2 id="results">Results: </h2>
+
+            <div id="countrybox"> <h4> Country of Origin:</h4> <br> <br> </div>
+            <div id="categorytypebox"> <h4> Category: </h4> <br> <h4> Type: </h4>  <br> </div>
+            <div id="linetypebox"> <h4> Line Type: </h4> <br> <br> </div>
+            <div id="volumereportscorebox"> <h4> Volume Score: </h4> <br> <h4> Report Score: </h4> <br> </div>
+            <div id="scorereputationbox"> <h4> Score Percent: </h4> <br><h4> Reputation Level: </h4> <br> </div>
+
       </div>
-`
+
       <div id="TopScoresOutput">
-        <h2>Top Scores: </h2>
-        <br> <br> <br>
+        <h2>Top Scores: <i class="subname">Your Top 10 Searches </i> </h2>
+        <table class="table table-striped" id="savedscores" >
+          <thead>
+            <tr>
+              <th scope="col" class="name" id="savedphonenumber">Phone Number</th>
+              <th scope="col" class="name" id="savedscore">Score</th>
+            </tr>
+          </thead>
+          <tbody id="newest-train"> 
+    
+          </tbody>
+        </table>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br>
       </div>
 
     </div>
