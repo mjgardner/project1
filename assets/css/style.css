@@ -29,3 +29,13 @@
     width: 100px;
     margin-bottom: 5px;
 }
+
+#ResultsOutput, #TopScoresOutput {
+    border: 1px solid darkcyan;
+}
+
+h2 {
+    border: 1px solid darkcyan;
+    padding-left: 10px;
+}
+
