@@ -1,11 +1,11 @@
-var whitePagesKey = "382fe41a61544d38a63b00ceec5711d3";
+var whitePagesKey = '382fe41a61544d38a63b00ceec5711d3';
 var map;
 var marker;
 
 $(function() {
-  $("#submitbutton").click(function(event) {
+  $('#submitbutton').click(function(event) {
     event.preventDefault();
-    var phoneNumber = $("#exampleInputPhoneNumber").val().trim();
+    var phoneNumber = $('#exampleInputPhoneNumber').val().trim();
 
     var url = {
       phoneReputation:
