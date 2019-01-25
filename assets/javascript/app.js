@@ -22,22 +22,20 @@ function lookup(phoneNumber) {
     method: "GET",
     success: function(response) {
       results["reverse_phone"] = response;
+      $.ajax({
+        url: url.phone_reputation,
+        method: "GET",
+        success: function(response) {
+          results["phone_reputation"] = response;
+          console.log(results);
+        },
+        error: function(xhr) {
+          console.log("error: " + xhr.status);
+        }
+      });
     },
     error: function(xhr) {
       console.log("error: " + xhr.status);
     }
   });
-
-  $.ajax({
-    url: url.phone_reputation,
-    method: "GET",
-    success: function(response) {
-      results["phone_reputation"] = response;
-    },
-    error: function(xhr) {
-      console.log("error: " + xhr.status);
-    }
-  });
-
-  console.log(results);
 }
