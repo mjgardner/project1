@@ -7,16 +7,13 @@
 }
 
 #enterNumber {
-    /* border: 1px solid rgb(62, 77, 77); */
     margin-top: 10px;
     position: relative;
     top: 25px;
 }
 
 #unknownnumber {
-    /* padding: 15px; */
     text-align: center;
-
 }
 
 #phonenumberlabel {
@@ -37,7 +34,7 @@
     margin-bottom: 5px;
 }
 
-#ResultsOutput, #TopScoresOutput {
+#ResultsOutput, #TopScoresOutput, #LastScoresOutput {
     border: 1px solid darkcyan;
     margin-bottom: 25px;
     height: 500px;
@@ -45,12 +42,8 @@
 
 h2 {
     border: 1px solid darkcyan;
-    padding-left: 50px;
+    padding-left: 40px;
     margin: -1px;
-}
-
-#results {
-    padding-left: 30px;
 }
 
 #countrybox {
@@ -98,10 +91,6 @@ h2 {
     margin-bottom: 40px;
 }
 
-.subname {
-    padding-left: 475px;
-}
-
 #savedscores {
     margin-top: 25px;
     background-color: rgb(32, 21, 126);
@@ -112,7 +101,7 @@ th {
 }
 
 #savedphonenumber {
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 #savedscore {
