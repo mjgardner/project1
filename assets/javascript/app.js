@@ -71,3 +71,7 @@ function initMap() {
     zoom: 8
   });
 }
+
+function ajaxError(xhr) {
+  console.log('error: ' + xhr.status);
+}
