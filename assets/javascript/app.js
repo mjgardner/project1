@@ -1,41 +1,39 @@
-var api_key = {
-  whitepages: "382fe41a61544d38a63b00ceec5711d3",
-};
+var whitePagesKey = "382fe41a61544d38a63b00ceec5711d3";
 
 function lookup(phoneNumber) {
   var url = {
-    phone_reputation:
-      "https://proapi.whitepages.com/3.0/phone_reputation?api_key=" +
-      api_key.whitepages +
-      "&phone=" +
+    phoneReputation:
+      'https://proapi.whitepages.com/3.0/phone_reputation?api_key=' +
+      whitePagesKey +
+      '&phone=' +
       phoneNumber,
-    reverse_phone:
-      "https://proapi.whitepages.com/3.0/phone?api_key=" +
-      api_key.whitepages +
-      "&phone=" +
+    reversePhone:
+      'https://proapi.whitepages.com/3.0/phone?api_key=' +
+      whitePagesKey +
+      '&phone=' +
       phoneNumber
   };
 
   var results = {};
   $.ajax({
-    url: url.reverse_phone,
-    method: "GET",
+    url: url.reversePhone,
+    method: 'GET',
     success: function(response) {
-      results["reverse_phone"] = response;
+      results['reversePhone'] = response;
       $.ajax({
-        url: url.phone_reputation,
-        method: "GET",
+        url: url.phoneReputation,
+        method: 'GET',
         success: function(response) {
-          results["phone_reputation"] = response;
+          results['phoneReputation'] = response;
           console.log(results);
         },
-        error: function(xhr) {
-          console.log("error: " + xhr.status);
-        }
+        error: ajaxError
       });
     },
-    error: function(xhr) {
-      console.log("error: " + xhr.status);
-    }
+    error: ajaxError
   });
+}
+
+function ajaxError(xhr) {
+  console.log('error: ' + xhr.status);
 }
