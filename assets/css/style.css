@@ -2,34 +2,38 @@
 
 .jumbotron {
     text-align: center;
-    height: 180px;
+    height: 250px;
+    margin-bottom: 20px;
 }
 
 #enterNumber {
-    border: 1px solid rgb(62, 77, 77);
+    /* border: 1px solid rgb(62, 77, 77); */
+    margin-top: 10px;
+    position: relative;
+    top: 25px;
 }
 
 #unknownnumber {
-    padding: 15px;
+    /* padding: 15px; */
     text-align: center;
 
 }
 
 #phonenumberlabel {
-    font-size: 45px;
+    font-size: 30px;
 }
 
 #exampleInputPhoneNumber {
-    width: 250;
+    width: 200;
     margin-left: 25px;
-    padding: 20px;
-    height: 55;
+    padding: 10px;
+    height: 40;
 }
 
 #submitbutton {
     margin-left: 25px;
-    padding: 15;
-    width: 100px;
+    padding: 5;
+    width: 85px;
     margin-bottom: 5px;
 }
 
@@ -52,7 +56,7 @@ h2 {
 #countrybox {
         background-color: lightblue;
         margin: 10px;
-        width: 45%;
+        width: 47%;
         height: 130;
 }
 
@@ -60,14 +64,14 @@ h2 {
     background-color: rgb(49, 218, 85);
     margin: 0px 10px 10px 10px;
     height: 185px;
-    width: 45%;
+    width: 47%;
 }
 
 #linetypebox {
     background-color: rgb(219, 241, 91);
     height: 95;
     margin: 0px 0px 10px 10px;
-    width: 45%;
+    width: 47%;
 }
 
 #volumereportscorebox {
@@ -76,7 +80,7 @@ h2 {
     margin: 10px;
     width: 50%;
     position: relative;
-    left: 510px;
+    left: 530px;
     top: -440;
 }
 
@@ -86,7 +90,7 @@ h2 {
     height: 210;
     width: 50%;
     position: relative;
-    left: 510px;
+    left: 530px;
     top: -440;
 }
 
