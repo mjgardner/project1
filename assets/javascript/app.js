@@ -37,3 +37,11 @@ function lookup(phoneNumber) {
 function ajaxError(xhr) {
   console.log('error: ' + xhr.status);
 }
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map-appears-here'), {
+    center: {lat: 29.762778, lng: -95.383056},
+    zoom: 8
+  });
+}
