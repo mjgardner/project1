@@ -13,30 +13,58 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">Who's Calling YOU?</h1>
-                <form id="enterNumber">
-                  <div class="form-group" id="unknownnumber">
-                    <label for="InputPhoneNumber" id="phonenumberlabel">Enter Phone Number Here: </label>
-                    <input type="text" id="exampleInputPhoneNumber" placeholder="Phone Number">
-                    <button type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
-                  </div>
-                </form>
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 text-center">Who's Calling YOU?</h1>
+        <div class="card">
+          <div class="card-body">
+            <form role="form">
+              <div class = "form-group text-center">
+                <label for="InputPhoneNumber" id="phonenumberlabel">Enter Phone Number Here: </label>
+                <input type="text" id="exampleInputPhoneNumber" placeholder="Phone Number">
+                <button type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
               </div>
+            </form>
+          </div>
+        </div>
+
+      <div class="card" id="results">
+        <div class="card-body">
+          <h2 class="card-title text-center">Results</h2>
+          <div class="row" id="map-column">
+            <div class="col">
+              <!-- Placeholder text to be deleted -->
+              <p class="text-center" id="map-display">DISPLAY MAP HERE</p>
+              <div id="map-appears-here"></div>
+            </div>
+          </div>
+          <div class="row" id="row-2">
+            <div class="col" id="address-column">
+              <!-- Placeholder text to be replaced by Address from API  -->
+              <p class="text-center" id="address-display">DISPLAY ADDRESS HERE</p>
+            </div>
+          </div>
+          <div class="row" id="row-3">
+            <div class="col" id="volume-score-column">
+                <p class="text-center">Volume Score (%)</p>
+                <!-- Display Volume Score from API -->
+                <p id="volume-score-display"></p> 
+            </div>
+            <div class="col" id="report-score-column">
+                <p class="text-center">Report Score (%)</p>
+                <!-- Display Report Score from API -->
+                <p id="report-score-display"></p>
+            </div> 
+          </div>
+          <div class="row" id="row-4">
+              <div class="col" id="score-column">
+                <p class="text-center" id="score-display">Score (%)</p>
+                <!-- Display Score from API -->
+                <p id="score-display"></p>
               </div>
-
-
-      <div id="ResultsOutput">
-        <h2 id="results">Results: </h2>
-
-            <div id="countrybox"> <h4> Country of Origin:</h4> <br> <br> </div>
-            <div id="categorytypebox"> <h4> Category: </h4> <br> <h4> Type: </h4>  <br> </div>
-            <div id="linetypebox"> <h4> Line Type: </h4> <br> <br> </div>
-            <div id="volumereportscorebox"> <h4> Volume Score: </h4> <br> <h4> Report Score: </h4> <br> </div>
-            <div id="scorereputationbox"> <h4> Score Percent: </h4> <br><h4> Reputation Level: </h4> <br> </div>
-
+            </div>
+        </div>
       </div>
+
 
       <div id="TopScoresOutput">
         <h2>Top Scores: <i class="subname">Your Top 10 Searches </i> </h2>
