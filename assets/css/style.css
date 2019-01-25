@@ -24,6 +24,11 @@
     background-color: lightblue;
 }
 
+#map-appears-here {
+    height: 400px;
+    width: 100%;
+}
+
 #address-column{
     background-color: lightcyan;
 }
