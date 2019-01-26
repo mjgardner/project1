@@ -35,7 +35,28 @@ $(function() {
             
              $("#reputation-level-display").empty(); 
              $("#report-score-display").empty(); 
-             $("#category-type-display").empty(); 
+             $("#volume-score-display").empty(); 
+
+             var repuationLevel = response.reputation_level;
+             var categoryType = response.reputation_details.category;
+             var reputationScore = response.reputation_details.score; 
+
+              $("#reputation-level-display").html(repuationLevel);
+              console.log(repuationLevel);
+              $("#report-score-display").html(reputationScore);
+              console.log(reputationScore);
+        
+              if (categoryType === null) {
+              $("#category-type-display").html("None")
+              console.log("None");
+               }
+               
+              else {
+                $("#category-type-display").html(categoryType);
+                console.log(categoryType);
+                }
+
+
 
 
             // set map and place marker
