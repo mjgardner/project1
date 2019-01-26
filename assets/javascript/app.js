@@ -59,11 +59,18 @@ $(function() {
 
 
 
-            // set map and place marker
+            // set address, map and place marker
             if (results.reversePhone) {
-              if (results.reversePhone.current_addresses[0]) {
-                if (results.reversePhone.current_addresses[0].lat_long) {
-                  var latLong = results.reversePhone.current_addresses[0].lat_long;
+              var address = results.reversePhone.current_addresses[0];
+              if (address) {
+                $('#address-display').html(
+                  address.street_line_1 + '<br>' +
+                  (address.street_line_2 ? address.street_line_2 + '<br>' : '') +
+                  address.city + ', ' + address.state_code + ' ' + address.postal_code +
+                  (address.zip4 ? '-' + address.zip4 : '')
+                );
+                if (address.lat_long) {
+                  var latLong = address.lat_long;
 
                   map = new google.maps.Map(document.getElementById('map-appears-here'), {
                     center: {lat: latLong.latitude, lng: latLong.longitude},
