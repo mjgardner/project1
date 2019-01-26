@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var whitePagesKey = '382fe41a61544d38a63b00ceec5711d3';
 var map;
 var marker;
@@ -65,7 +64,6 @@ $(function() {
       },
       error: ajaxError
     });
-=======
 
 
   // Initialize Firebase
@@ -118,7 +116,6 @@ function lookup(phoneNumber) {
     error: function(xhr) {
       console.log("error: " + xhr.status);
     }
->>>>>>> pull from master
   });
 });
 
