@@ -1,24 +1,7 @@
-
-
 .jumbotron {
-    text-align: center;
     height: 250px;
     margin-bottom: 20px;
 }
-
-#enterNumber {
-    /* border: 1px solid rgb(62, 77, 77); */
-    margin-top: 10px;
-    position: relative;
-    top: 25px;
-}
-
-#unknownnumber {
-    /* padding: 15px; */
-    text-align: center;
-
-}
-
 #phonenumberlabel {
     font-size: 30px;
 }
@@ -37,6 +20,30 @@
     margin-bottom: 5px;
 }
 
+#map-column{
+    background-color: lightblue;
+}
+
+#map-appears-here {
+    height: 400px;
+    width: 100%;
+}
+
+#address-column{
+    background-color: lightcyan;
+}
+
+#volume-score-column{
+    background-color: lightskyblue;
+}
+#report-score-column{
+    background-color: lightsteelblue;
+}
+#score-column{
+    background-color:lavender;
+}
+
+
 #ResultsOutput, #TopScoresOutput {
     border: 1px solid darkcyan;
     margin-bottom: 25px;
@@ -45,58 +52,8 @@
 
 h2 {
     border: 1px solid darkcyan;
-    padding-left: 50px;
-    margin: -1px;
 }
 
-#results {
-    padding-left: 30px;
-}
-
-#countrybox {
-        background-color: lightblue;
-        margin: 10px;
-        width: 47%;
-        height: 130;
-}
-
-#categorytypebox {
-    background-color: rgb(49, 218, 85);
-    margin: 0px 10px 10px 10px;
-    height: 185px;
-    width: 47%;
-}
-
-#linetypebox {
-    background-color: rgb(219, 241, 91);
-    height: 95;
-    margin: 0px 0px 10px 10px;
-    width: 47%;
-}
-
-#volumereportscorebox {
-    background-color: rgb(248, 116, 215);
-    height: 210;
-    margin: 10px;
-    width: 50%;
-    position: relative;
-    left: 530px;
-    top: -440;
-}
-
-#scorereputationbox {
-    background-color: rgb(247, 174, 80);
-    margin: 10px;
-    height: 210;
-    width: 50%;
-    position: relative;
-    left: 530px;
-    top: -440;
-}
-
-#TopScoresOutput {
-    margin-bottom: 40px;
-}
 
 .subname {
     padding-left: 475px;
@@ -118,4 +75,3 @@ th {
 #savedscore {
     padding-right: 55px;
 }
-
