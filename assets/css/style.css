@@ -2,20 +2,6 @@
     height: 250px;
     margin-bottom: 20px;
 }
-<<<<<<< HEAD
-=======
-
-#enterNumber {
-    margin-top: 10px;
-    position: relative;
-    top: 25px;
-}
-
-#unknownnumber {
-    text-align: center;
-}
-
->>>>>>> 5454734c7b2001ee3930f76aa6acb3c02e2163e0
 #phonenumberlabel {
     font-size: 30px;
 }
@@ -34,7 +20,6 @@
     margin-bottom: 5px;
 }
 
-<<<<<<< HEAD
 #map-column{
     background-color: lightblue;
 }
@@ -71,14 +56,10 @@ h2 {
     border: 1px solid darkcyan;
 }
 
-<<<<<<< HEAD
-
 .subname {
     padding-left: 475px;
 }
 
-=======
->>>>>>> 5454734c7b2001ee3930f76aa6acb3c02e2163e0
 #savedscores {
     margin-top: 25px;
     background-color: rgb(32, 21, 126);
