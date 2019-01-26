@@ -57,8 +57,6 @@ $(function() {
                 }
 
 
-
-
             // set address, map and place marker
             if (results.reversePhone) {
               var address = results.reversePhone.current_addresses[0];
