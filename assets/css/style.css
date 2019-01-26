@@ -7,23 +7,16 @@
 }
 
 #enterNumber {
-<<<<<<< HEAD
-=======
     /* border: 1px solid rgb(62, 77, 77); */
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
     margin-top: 10px;
     position: relative;
     top: 25px;
 }
 
 #unknownnumber {
-<<<<<<< HEAD
-    text-align: center;
-=======
     /* padding: 15px; */
     text-align: center;
 
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
 }
 
 #phonenumberlabel {
@@ -44,11 +37,7 @@
     margin-bottom: 5px;
 }
 
-<<<<<<< HEAD
-#ResultsOutput, #TopScoresOutput, #LastScoresOutput {
-=======
 #ResultsOutput, #TopScoresOutput {
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
     border: 1px solid darkcyan;
     margin-bottom: 25px;
     height: 500px;
@@ -56,12 +45,6 @@
 
 h2 {
     border: 1px solid darkcyan;
-<<<<<<< HEAD
-    padding-left: 40px;
-    margin: -1px;
-}
-
-=======
     padding-left: 50px;
     margin: -1px;
 }
@@ -70,7 +53,6 @@ h2 {
     padding-left: 30px;
 }
 
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
 #countrybox {
         background-color: lightblue;
         margin: 10px;
@@ -116,13 +98,10 @@ h2 {
     margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
-=======
 .subname {
     padding-left: 475px;
 }
 
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
 #savedscores {
     margin-top: 25px;
     background-color: rgb(32, 21, 126);
@@ -133,11 +112,7 @@ th {
 }
 
 #savedphonenumber {
-<<<<<<< HEAD
-    padding-left: 50px;
-=======
     padding-left: 60px;
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
 }
 
 #savedscore {

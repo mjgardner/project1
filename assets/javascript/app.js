@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   // Initialize Firebase
@@ -12,7 +11,6 @@
   };
   firebase.initializeApp(config);
  
-=======
 var api_key = {
   whitepages: "382fe41a61544d38a63b00ceec5711d3",
 };
@@ -54,4 +52,3 @@ function lookup(phoneNumber) {
     }
   });
 }
->>>>>>> 9b582bd68f3ae2c5d8e94155073bf3f0589a69c3
