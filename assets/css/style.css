@@ -36,9 +36,11 @@
 #volume-score-column{
     background-color: lightskyblue;
 }
+
 #report-score-column{
     background-color: lightsteelblue;
 }
+
 #score-column{
     background-color:lavender;
 }
@@ -54,7 +56,6 @@ h2 {
     border: 1px solid darkcyan;
 }
 
-
 .subname {
     padding-left: 475px;
 }
@@ -69,7 +70,7 @@ th {
 }
 
 #savedphonenumber {
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 #savedscore {
