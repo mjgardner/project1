@@ -1,6 +1,19 @@
+#reputation-level-info{
+    display: none;
+} 
+
+#category-type-info{
+    display: none;
+} 
+
+#report-score-info{
+    display: none;
+} 
+
 .jumbotron {
     height: 250px;
     margin-bottom: 20px;
+    background-color: white;
 }
 #phonenumberlabel {
     font-size: 30px;
@@ -20,35 +33,25 @@
     margin-bottom: 5px;
 }
 
-#map-column{
-    background-color: lightblue;
-}
 
-#address-column{
-    background-color: lightcyan;
-}
-
-#volume-score-column{
-    background-color: lightskyblue;
-}
-#report-score-column{
-    background-color: lightsteelblue;
-}
-#score-column{
-    background-color:lavender;
+#map-appears-here {
+    height: 400px;
+    width: 100%;
 }
 
 
-#ResultsOutput, #TopScoresOutput {
-    border: 1px solid darkcyan;
+#ResultsOutput, #TopScoresOutput{
+    border: 1px solid black;
     margin-bottom: 25px;
     height: 500px;
 }
-
-h2 {
-    border: 1px solid darkcyan;
+.card{
+    border: 1px solid black;
 }
 
+h2 {
+    border: 1px solid black;
+}
 
 .subname {
     padding-left: 475px;
@@ -64,9 +67,18 @@ th {
 }
 
 #savedphonenumber {
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 #savedscore {
     padding-right: 55px;
+}
+
+footer{
+    background: lightgray;
+    color: black; 
+    padding-top: 5px;
+    border-top-color: black;
+    border-style: solid;
+    border-width: 2px 0 0 0 ;
 }
