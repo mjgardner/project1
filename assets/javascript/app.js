@@ -70,12 +70,12 @@ $(function() {
             });  
             
 
-             var repuationLevel = response.reputation_level;
+             var reputationLevel = response.reputation_level;
              var categoryType = response.reputation_details.category;
              var reputationScore = response.reputation_details.score; 
 
               $("#reputation-level-display").html(repuationLevel);
-              console.log(repuationLevel);
+              console.log(reputationLevel);
               $("#report-score-display").html(reputationScore);
               console.log(reputationScore);
         
