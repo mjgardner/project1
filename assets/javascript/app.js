@@ -25,7 +25,7 @@ $(function() {
         whitePagesKey +
         '&phone=' +
         phoneNumber,
-      reversePhone:
+      reversePhone: 
         'https://proapi.whitepages.com/3.0/phone?api_key=' +
         whitePagesKey +
         '&phone=' +
@@ -70,12 +70,12 @@ $(function() {
             });  
             
 
-             var repuationLevel = response.reputation_level;
+             var reputationLevel = response.reputation_level;
              var categoryType = response.reputation_details.category;
              var reputationScore = response.reputation_details.score; 
 
-              $("#reputation-level-display").html(repuationLevel);
-              console.log(repuationLevel);
+              $("#reputation-level-display").html(reputationLevel);
+              console.log(reputationLevel);
               $("#report-score-display").html(reputationScore);
               console.log(reputationScore);
         

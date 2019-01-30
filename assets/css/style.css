@@ -5,7 +5,10 @@
 #category-type-info{
     display: none;
 } 
-
+#title {
+    position: relative;
+    top: -32px; 
+}
 #report-score-info{
     display: none;
 } 
@@ -40,7 +43,7 @@
 }
 
 #address-column{
-    background-color: lightcyan;
+    background-color: white;
 }
 
 #volume-score-column{
@@ -48,7 +51,7 @@
 }
 
 #report-score-column{
-    background-color: lightsteelblue;
+    background-color: white;
 }
 
 #score-column{
