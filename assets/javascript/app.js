@@ -102,3 +102,37 @@ function initMap() {
 function ajaxError(xhr) {
   console.log('error: ' + xhr.status);
 }
+$(document).ready(function(){
+
+  // create a function to hide and display information when info icon is pressed
+  $("#reputation-level-info-icon").on("click", function(){
+      var x = document.getElementById("reputation-level-info");
+      // console.log(x.style)
+      if (x.style.display === "none" || !x.style.display) { 
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+  })
+  // create a function to hide and display information when info icon is pressed
+  $("#category-type-info-icon").on("click", function(){
+      var x = document.getElementById("category-type-info");
+      // console.log(x.style)
+      if (x.style.display === "none" || !x.style.display) {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      })
+  // create a function to hide and display information when info icon is pressed
+  $("#report-score-info-icon").on("click", function(){
+      var x = document.getElementById("report-score-info");
+      // console.log(x.style)
+      if (x.style.display === "none" || !x.style.display) {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+  })
+})
+
