@@ -95,9 +95,9 @@ $(function() {
               var address = results.reversePhone.current_addresses[0];
               if (address) {
                 $('#address-display').html(
-                  address.street_line_1 + '<br>' +
+                  (address.street_line_1 ? address.street_line_1 + '<br>' : '') +
                   (address.street_line_2 ? address.street_line_2 + '<br>' : '') +
-                  address.city + ', ' + address.state_code + ' ' + address.postal_code +
+                  address.city + ', ' + address.state_code + ' ' + (address.postal_code ? address.postal_code : '') +
                   (address.zip4 ? '-' + address.zip4 : '')
                 );
                 if (address.lat_long) {
