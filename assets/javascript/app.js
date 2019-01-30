@@ -25,7 +25,7 @@ $(function() {
         whitePagesKey +
         '&phone=' +
         phoneNumber,
-      reversePhone:
+      reversePhone: 
         'https://proapi.whitepages.com/3.0/phone?api_key=' +
         whitePagesKey +
         '&phone=' +
