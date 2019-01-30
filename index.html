@@ -12,9 +12,8 @@
         crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-      <!-- CSS -->
-      <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />  
-      <!-- JavaScript -->
+      <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>  
       <script src="assets/javascript/app.js"></script>
       <!-- Font Awesome -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -100,25 +99,27 @@
           </div>
         </div>
 
-        <div class="card" id="TopScoresOutput">
+        <div class="card" id="recentSearches">
           <div class="card-body">
             <div class="row">
-              <div class="col">
-                  <h2 class="text-center" id="top-10-display">Your Top 10 Searches</h2>
+             <!-- <div class="col">
+                  <p class="text-center" id="top-scores-display">Top Scores:</p>
               </div>
               <div class="col">
-                  <p class="text-center" id="top-10-display">Your Last 10 Searches</p>
-              </div>
-            <h2>Top Scores: <i class="subname">Your Last 10 Searches </i> </h2>
+                  <p class="text-center" id="top-10-display">Recent Searches</p>
+              </div> -->
+            <h2>Top Scores: <i class="subname">Recent Searches </i> </h2>
           </div>
-          <table class="table table-striped" id="savedscores" >
+          <table class="table table-striped" id="savedScores" >
             <thead>
               <tr>
                 <th scope="col" class="name" id="savedphonenumber">Phone Number</th>
-                <th scope="col" class="name" id="savedscore">Score</th>
+                <th scope="col" class="name" id="category">Category</th>
+                <th scope="col" class="name" id="repLevel">Reputation Level</th>
+                <th scope="col" class="name" id="repScore">Reputation Score</th>
               </tr>
             </thead>
-            <tbody id="newest-train"> 
+            <tbody> 
       
             </tbody>
           </table>
