@@ -74,7 +74,7 @@ $(function() {
              var categoryType = response.reputation_details.category;
              var reputationScore = response.reputation_details.score; 
 
-              $("#reputation-level-display").html(repuationLevel);
+              $("#reputation-level-display").html(reputationLevel);
               console.log(reputationLevel);
               $("#report-score-display").html(reputationScore);
               console.log(reputationScore);
