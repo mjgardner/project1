@@ -1,6 +1,18 @@
 var whitePagesKey = '382fe41a61544d38a63b00ceec5711d3';
 var map;
 var marker;
+var firebaseConfig = {
+  apiKey: "AIzaSyAvvvOlr-YOqg3zdrTOeg8Dnmu1Y-A5SBA",
+  authDomain: "whos-calling-me-1548382086597.firebaseapp.com",
+  databaseURL: "https://whos-calling-me-1548382086597.firebaseio.com",
+  projectId: "whos-calling-me-1548382086597",
+  storageBucket: "whos-calling-me-1548382086597.appspot.com",
+  messagingSenderId: "903989663896"
+};
+
+firebase.initializeApp(firebaseConfig);
+              
+var database = firebase.database();
 
 $(function() {
   $('#submitbutton').click(function(event) {
@@ -32,10 +44,31 @@ $(function() {
           success: function(response) {
             results['phoneReputation'] = response;
             console.log(results);
+           
+            results.dateAdded = firebase.database.ServerValue.TIMESTAMP;
+
+            database.ref().push(results);
             
-             $("#reputation-level-display").empty(); 
-             $("#report-score-display").empty(); 
-             $("#volume-score-display").empty(); 
+            database.ref().on("child_added", function(childSnapshot) {
+              console.log(childSnapshot.val());
+
+              var phoneNumber = childSnapshot.val().reversePhone.phone_number;
+              var category = childSnapshot.val().phoneReputation.reputation_details.category;
+              var repLevel = childSnapshot.val().phoneReputation.reputation_level;
+              var repScore = childSnapshot.val().phoneReputation.reputation_details.score;
+              var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MM D YYYY');
+
+              var newRow = $("<tr>").append(
+                $("<td>").text(dateAdded),
+                $("<td>").text(phoneNumber),
+                $("<td>").text(category),
+                $("<td>").text(repLevel),
+                $("<td>").text(repScore)
+              );
+              
+              $("#savedScores  > tbody").append(newRow);
+            });  
+            
 
              var repuationLevel = response.reputation_level;
              var categoryType = response.reputation_details.category;
@@ -81,7 +114,6 @@ $(function() {
                 }
               }
             }
-
           },
           error: ajaxError
         });
