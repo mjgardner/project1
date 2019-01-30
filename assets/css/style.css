@@ -1,102 +1,122 @@
-#reputation-level-info{
-    display: none;
-} 
+#reputation-level-info {
+  display: none;
+  text-align: center;
+  font-size: small;
+}
 
-#category-type-info{
-    display: none;
-} 
+#category-type-info {
+  display: none;
+  text-align: center;
+  font-size: small;
+}
 
-#report-score-info{
-    display: none;
-} 
+#info-headings, #report-score{
+    font-size: large;
+    font-weight: 600;
+}
+
+#report-score-display,
+#reputation-level-display,
+#category-type-display {
+  text-align: center;
+  font-weight: 500;
+
+}
+
+#report-score-info {
+  display: none;
+  text-align: center;
+  font-size: small;
+}
 
 .jumbotron {
-    height: 250px;
-    margin-bottom: 20px;
-    background-color: white;
+  height: 250px;
+  margin-bottom: 20px;
+  background-color: white;
 }
 #phonenumberlabel {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 #exampleInputPhoneNumber {
-    width: 200;
-    margin-left: 25px;
-    padding: 10px;
-    height: 40;
+  width: 200;
+  margin-left: 25px;
+  padding: 10px;
+  height: 40;
 }
 
 #submitbutton {
-    margin-left: 25px;
-    padding: 5;
-    width: 85px;
-    margin-bottom: 5px;
+  margin-left: 25px;
+  padding: 5;
+  width: 85px;
+  margin-bottom: 5px;
 }
-
 
 #map-appears-here {
-    height: 400px;
-    width: 100%;
+  height: 400px;
+  width: 100%;
 }
 
-#address-column{
-    background-color: lightcyan;
+#address-column {
+  background-color: lightcyan;
 }
 
-#volume-score-column{
-    background-color: lightskyblue;
+#volume-score-column {
+  background-color: lightskyblue;
 }
 
-#report-score-column{
-    background-color: lightsteelblue;
+#report-score-column {
+  background-color: lightsteelblue;
 }
 
-#score-column{
-    background-color:lavender;
+#score-column {
+  background-color: lavender;
 }
 
-
-#ResultsOutput, #TopScoresOutput{
-    border: 1px solid black;
-    margin-bottom: 25px;
-    height: 500px;
+#ResultsOutput,
+#TopScoresOutput {
+  border: 1px solid black;
+  margin-bottom: 25px;
+  height: 500px;
 }
-.card{
-    border: 1px solid black;
+.card {
+  border: 1px solid black;
 }
 
 h2 {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .subname {
-    padding-left: 475px;
+  padding-left: 475px;
 }
 
 #savedscores {
-    margin-top: 25px;
-    background-color: rgb(32, 21, 126);
+  margin-top: 25px;
+  background-color: rgb(32, 21, 126);
 }
 
 th {
-    color: white;
+  color: white;
 }
 
 #savedphonenumber {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
 #savedscore {
-    padding-right: 55px;
+  padding-right: 55px;
 }
 
-
-footer{
-    background: lightgray;
-    color: black; 
-    padding-top: 5px;
-    border-top-color: black;
-    border-style: solid;
-    border-width: 2px 0 0 0 ;
+footer {
+  background: lightgray;
+  color: black;
+  padding-top: 5px;
+  border-top-color: black;
+  border-style: solid;
+  border-width: 2px 0 0 0;
 }
 
+#dataRows {
+  background-color: ghostwhite;
+}

@@ -56,7 +56,7 @@ $(function() {
               var category = childSnapshot.val().phoneReputation.reputation_details.category;
               var repLevel = childSnapshot.val().phoneReputation.reputation_level;
               var repScore = childSnapshot.val().phoneReputation.reputation_details.score;
-              var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MM D YYYY');
+              var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MMM D YYYY');
 
               var newRow = $("<tr>").append(
                 $("<td>").text(dateAdded),
