@@ -20,13 +20,23 @@
 #category-type-display {
   text-align: center;
   font-weight: 500;
-
 }
 
 #report-score-info {
   display: none;
   text-align: center;
   font-size: small;
+}
+
+#category-type-info{
+    display: none;
+} 
+#title {
+    position: relative;
+    top: -32px; 
+}
+#report-score-info{
+    display: none;
 }
 
 .jumbotron {
@@ -57,16 +67,17 @@
   width: 100%;
 }
 
-#address-column {
-  background-color: lightcyan;
+#address-column{
+    background-color: white;
 }
 
 #volume-score-column {
   background-color: lightskyblue;
 }
 
-#report-score-column {
-  background-color: lightsteelblue;
+
+#report-score-column{
+    background-color: white;
 }
 
 #score-column {
