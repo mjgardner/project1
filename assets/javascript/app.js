@@ -62,8 +62,8 @@ $(function() {
                 $("<td>").text(dateAdded),
                 $("<td>").text(phoneNumber),
                 $("<td>").text(category),
-                $("<td>").text(repLevel),
-                $("<td>").text(repScore)
+                $("<td>").text(repLevel + "/4"),
+                $("<td>").text(repScore + "/100")
               );
               
               $("#savedScores  > tbody").append(newRow);
@@ -74,9 +74,9 @@ $(function() {
              var categoryType = response.reputation_details.category;
              var reputationScore = response.reputation_details.score; 
 
-              $("#reputation-level-display").html(reputationLevel);
+              $("#reputation-level-display").html(reputationLevel + "/4");
               console.log(reputationLevel);
-              $("#report-score-display").html(reputationScore);
+              $("#report-score-display").html(reputationScore + "/100");
               console.log(reputationScore);
         
               if (categoryType === null) {
