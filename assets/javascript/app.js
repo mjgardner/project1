@@ -45,6 +45,8 @@ $(function() {
             results['phoneReputation'] = response;
             console.log(results);
            
+            results.dateAdded = firebase.database.ServerValue.TIMESTAMP;
+
             database.ref().push(results);
             
             database.ref().on("child_added", function(childSnapshot) {
@@ -54,8 +56,10 @@ $(function() {
               var category = childSnapshot.val().phoneReputation.reputation_details.category;
               var repLevel = childSnapshot.val().phoneReputation.reputation_level;
               var repScore = childSnapshot.val().phoneReputation.reputation_details.score;
-              
+              var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MM D YYYY');
+
               var newRow = $("<tr>").append(
+                $("<td>").text(dateAdded),
                 $("<td>").text(phoneNumber),
                 $("<td>").text(category),
                 $("<td>").text(repLevel),
