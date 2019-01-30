@@ -102,7 +102,6 @@ function initMap() {
 function ajaxError(xhr) {
   console.log('error: ' + xhr.status);
 }
-
 $(document).ready(function(){
 
   // create a function to hide and display information when info icon is pressed
@@ -136,3 +135,4 @@ $(document).ready(function(){
         }
   })
 })
+
