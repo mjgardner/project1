@@ -49,24 +49,27 @@ $(function() {
 
             database.ref().push(results);
             
-            database.ref().on("child_added", function(childSnapshot) {
+            database.ref().on("value", function(childSnapshot) {
               console.log(childSnapshot.val());
-
-              var phoneNumber = childSnapshot.val().reversePhone.phone_number;
-              var category = childSnapshot.val().phoneReputation.reputation_details.category;
-              var repLevel = childSnapshot.val().phoneReputation.reputation_level;
-              var repScore = childSnapshot.val().phoneReputation.reputation_details.score;
-              var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MMM D YYYY');
-
-              var newRow = $("<tr>").append(
-                $("<td>").text(dateAdded),
-                $("<td>").text(phoneNumber),
-                $("<td>").text(category),
-                $("<td>").text(repLevel + "/4"),
-                $("<td>").text(repScore + "/100")
-              );
               
-              $("#savedScores  > tbody").append(newRow);
+                var phoneNumber = childSnapshot.val().reversePhone.phone_number;
+                var category = childSnapshot.val().phoneReputation.reputation_details //&& childSnapshot.val()[key].phoneReputation.reputation_details.category;
+                var repLevel = childSnapshot.val().phoneReputation.reputation_level;
+                var repScore = childSnapshot.val().phoneReputation.reputation_details //&& childSnapshot.val()[key].phoneReputation.reputation_details.score;
+                var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MMM D YYYY');
+
+                console.log(phoneNumber, category, repLevel, repScore, dateAdded)
+
+                var newRow = $("<tr>").append(
+                  $("<td>").text(dateAdded),
+                  $("<td>").text(phoneNumber),
+                  $("<td>").text(category),
+                  $("<td>").text(repLevel),
+                  $("<td>").text(repScore)
+                );
+                
+                $("#savedScores  > tbody").append(newRow);
+              
             });  
             
 
