@@ -2,12 +2,24 @@
   display: none;
   text-align: center;
   font-size: small;
+  width: 250px;
+  margin-left: 130px;
+  margin-bottom: 3px;
 }
+
+#info-heading {
+    margin-bottom: 3px;
+}
+
+
 
 #category-type-info {
   display: none;
   text-align: center;
   font-size: small;
+  width: 275px;
+  margin-left: 130px;
+  margin-bottom: 3px;
 }
 
 #info-headings, #report-score{
@@ -26,6 +38,8 @@
   display: none;
   text-align: center;
   font-size: small;
+  width: 400px;
+  margin-left: 325px;
 }
 
 #category-type-info{
@@ -40,7 +54,7 @@
 }
 
 .jumbotron {
-  height: 250px;
+  height: 225px;
   margin-bottom: 20px;
   background-color: white;
 }
@@ -92,10 +106,14 @@
 }
 .card {
   border: 1px solid black;
+  margin-bottom: 15px;
 }
 
 h2 {
-  border: 1px solid black;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  width: 850px;
+  margin-left: 110px;
 }
 
 .subname {
@@ -131,3 +149,12 @@ footer {
 #dataRows {
   background-color: ghostwhite;
 }
+
+.card-one {
+    border: none;
+    /* background-color: lightgray; */
+}
+
+/* .form-group {
+    border: 1px solid black;
+} */
