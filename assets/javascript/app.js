@@ -1,4 +1,4 @@
-var whitePagesKey = '382fe41a61544d38a63b00ceec5711d3';
+var whitePagesKey = '9c1e6a670dcd4f9599686f5057a57543';
 var map;
 var marker;
 var firebaseConfig = {
@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
               
 var database = firebase.database();
 
-$(function() {
+$(document).ready(function() {
   $('#submitbutton').click(function(event) {
     event.preventDefault();
     var phoneNumber = $('#exampleInputPhoneNumber').val().trim();
@@ -51,14 +51,18 @@ $(function() {
             
             database.ref().on("value", function(childSnapshot) {
               console.log(childSnapshot.val());
-              
-                var phoneNumber = childSnapshot.val().reversePhone.phone_number;
-                var category = childSnapshot.val().phoneReputation.reputation_details //&& childSnapshot.val()[key].phoneReputation.reputation_details.category;
-                var repLevel = childSnapshot.val().phoneReputation.reputation_level;
-                var repScore = childSnapshot.val().phoneReputation.reputation_details //&& childSnapshot.val()[key].phoneReputation.reputation_details.score;
-                var dateAdded = dayjs(childSnapshot.val().dateAdded).format('MMM D YYYY');
 
-                console.log(phoneNumber, category, repLevel, repScore, dateAdded)
+              Object.keys(childSnapshot.val()).forEach(function(key, i){
+                if (i > 9) return;
+              
+              
+                var phoneNumber = childSnapshot.val()[key].reversePhone.phone_number;
+                var category = childSnapshot.val()[key].phoneReputation.reputation_details && childSnapshot.val()[key].phoneReputation.reputation_details.category;
+                var repLevel = childSnapshot.val()[key].phoneReputation.reputation_level;
+                var repScore = childSnapshot.val()[key].phoneReputation.reputation_details && childSnapshot.val()[key].phoneReputation.reputation_details.score;
+                var dateAdded = dayjs(childSnapshot.val()[key].dateAdded).format('MMM D YYYY');
+
+                console.log(phoneNumber, category, repLevel, repScore, dateAdded);
 
                 var newRow = $("<tr>").append(
                   $("<td>").text(dateAdded),
@@ -69,28 +73,26 @@ $(function() {
                 );
                 
                 $("#savedScores  > tbody").append(newRow);
-              
-            });  
-            
+              });
+            });
 
-             var reputationLevel = response.reputation_level;
-             var categoryType = response.reputation_details.category;
-             var reputationScore = response.reputation_details.score; 
+            var reputationLevel = response.reputation_level;
+            var categoryType = response.reputation_details.category;
+            var reputationScore = response.reputation_details.score; 
 
-              $("#reputation-level-display").html(reputationLevel + "/4");
-              console.log(reputationLevel);
-              $("#report-score-display").html(reputationScore + "/100");
-              console.log(reputationScore);
+            $("#reputation-level-display").html(reputationLevel + "/4");
+            console.log(reputationLevel);
+            $("#report-score-display").html(reputationScore + "/100");
+            console.log(reputationScore);
         
-              if (categoryType === null) {
+            if (categoryType === null) {
               $("#category-type-display").html("None")
               console.log("None");
-               }
-               
-              else {
-                $("#category-type-display").html(categoryType);
-                console.log(categoryType);
-                }
+            }               
+            else {
+              $("#category-type-display").html(categoryType);
+              console.log(categoryType);
+            }
 
 
             // set address, map and place marker
@@ -170,4 +172,3 @@ $(document).ready(function(){
         }
   })
 })
-
