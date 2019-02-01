@@ -94,7 +94,25 @@ $(document).ready(function() {
               console.log(categoryType);
             }
 
+                  function colorDiv() {
+                    if (reputationScore >= 85 && reputationScore <= 100) {
+                      $("#report-score-display").css("background-color", "red")
 
+                    }
+                  else if (reputationScore >= 70 && reputationScore <= 84) {
+                    $("#report-score-display").css("background-color", "orange")
+
+                  }
+                  else if (reputationScore >= 50 && reputationScore <= 69){
+                    $("#report-score-display").css("background-color", "yellow")
+
+                  }
+                      else{
+                      $("#report-score-display").css("background-color", "green")
+                    }
+                  }
+                  colorDiv();
+                              
             // set address, map and place marker
             if (results.reversePhone) {
               var address = results.reversePhone.current_addresses[0];
@@ -172,3 +190,4 @@ $(document).ready(function(){
         }
   })
 })
+

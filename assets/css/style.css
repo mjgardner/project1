@@ -156,9 +156,9 @@ footer {
 
 .card-one {
     border: none;
-    /* background-color: lightgray; */
 }
 
-/* .form-group {
-    border: 1px solid black;
-} */
+#report-score-display {
+    width: 100;
+    margin-left: 485;
+}
