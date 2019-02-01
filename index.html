@@ -32,7 +32,10 @@
               <form role="form">
                 <div class = "form-group text-center">
                   <label for="InputPhoneNumber" id="phonenumberlabel">Enter Phone Number Here: </label>
-                  <input type="text" id="exampleInputPhoneNumber" placeholder="Phone Number">
+                  <!-- Change type so only numbers can be entered. However, "e", "." and "-" can still be entered.-->
+                  <!-- Add onkeydown event so no non-number values can be entered. -->
+                  <!-- Add oniput condition so only 10 items can be entered. -->
+                  <input type="number" onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))" oninput="if(value.length>10)value=value.slice(0,10)" id="exampleInputPhoneNumber" placeholder="Phone Number">
                   <button type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
                 </div>
               </form>
