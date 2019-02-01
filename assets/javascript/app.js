@@ -13,7 +13,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
               
 var database = firebase.database();
-$(document).ready(function(){
 
 $(document).ready(function() {
   $('#submitbutton').click(function(event) {
@@ -140,7 +139,7 @@ function initMap() {
 function ajaxError(xhr) {
   console.log('error: ' + xhr.status);
 }
-
+$(document).ready(function(){
 
   // create a function to hide and display information when info icon is pressed
   $("#reputation-level-info-icon").on("click", function(){
