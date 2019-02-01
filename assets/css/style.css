@@ -1,3 +1,7 @@
+#reputation-level-info-icon, #category-type-info-icon, #report-score-info-icon{
+  text-decoration: none;
+}
+
 #reputation-level-info {
   display: none;
   text-align: center;
