@@ -115,11 +115,13 @@ $(document).ready(function() {
     });
   });
 
+  var rowCounter = 0;
   database
     .ref()
     .orderByChild("dateAdded")
     .limitToLast(10)
     .on("child_added", function(childSnapshot) {
+      rowCounter++;
       var phoneNumber = childSnapshot.val().reversePhone.phone_number;
       var category =
         childSnapshot.val().phoneReputation.reputation_details &&
@@ -138,7 +140,14 @@ $(document).ready(function() {
         $("<td>").text(repScore)
       );
 
-      $("#savedScores  > tbody").prepend(newRow);
+      $("#dataRows").prepend(newRow);
+      if (rowCounter > 10) {
+        $("#dataRows").children().each(function(index, element){
+          if (index >= 10) {
+            $(element).empty();
+          }
+        });
+      }
     });
 });
 
