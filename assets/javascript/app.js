@@ -48,50 +48,7 @@ $(document).ready(function() {
             console.log(results);
 
             results.dateAdded = firebase.database.ServerValue.TIMESTAMP;
-
             database.ref().push(results);
-
-            database.ref().on("value", function(childSnapshot) {
-              console.log(childSnapshot.val());
-
-              Object.keys(childSnapshot.val()).forEach(function(key, i) {
-                if (i > 9) return;
-
-                var phoneNumber = childSnapshot.val()[key].reversePhone
-                  .phone_number;
-                var category =
-                  childSnapshot.val()[key].phoneReputation.reputation_details &&
-                  childSnapshot.val()[key].phoneReputation.reputation_details
-                    .category;
-                var repLevel = childSnapshot.val()[key].phoneReputation
-                  .reputation_level;
-                var repScore =
-                  childSnapshot.val()[key].phoneReputation.reputation_details &&
-                  childSnapshot.val()[key].phoneReputation.reputation_details
-                    .score;
-                var dateAdded = dayjs(
-                  childSnapshot.val()[key].dateAdded
-                ).format("MMM D YYYY");
-
-                console.log(
-                  phoneNumber,
-                  category,
-                  repLevel,
-                  repScore,
-                  dateAdded
-                );
-
-                var newRow = $("<tr>").append(
-                  $("<td>").text(dateAdded),
-                  $("<td>").text(phoneNumber),
-                  $("<td>").text(category),
-                  $("<td>").text(repLevel),
-                  $("<td>").text(repScore)
-                );
-
-                $("#savedScores  > tbody").append(newRow);
-              });
-            });
 
             var reputationLevel = response.reputation_level;
             var categoryType = response.reputation_details.category;
@@ -165,6 +122,36 @@ $(document).ready(function() {
       error: ajaxError
     });
   });
+
+  database
+    .ref()
+    .orderByChild("dateAdded")
+    .limitToLast(10)
+    .on("child_added", function(childSnapshot) {
+      console.log(childSnapshot.val());
+
+      var phoneNumber = childSnapshot.val().reversePhone.phone_number;
+      var category =
+        childSnapshot.val().phoneReputation.reputation_details &&
+        childSnapshot.val().phoneReputation.reputation_details.category;
+      var repLevel = childSnapshot.val().phoneReputation.reputation_level;
+      var repScore =
+        childSnapshot.val().phoneReputation.reputation_details &&
+        childSnapshot.val().phoneReputation.reputation_details.score;
+      var dateAdded = dayjs(childSnapshot.val().dateAdded).format("MMM D YYYY");
+
+      console.log(phoneNumber, category, repLevel, repScore, dateAdded);
+
+      var newRow = $("<tr>").append(
+        $("<td>").text(dateAdded),
+        $("<td>").text(phoneNumber),
+        $("<td>").text(category),
+        $("<td>").text(repLevel),
+        $("<td>").text(repScore)
+      );
+
+      $("#savedScores  > tbody").prepend(newRow);
+    });
 });
 
 function initMap() {
