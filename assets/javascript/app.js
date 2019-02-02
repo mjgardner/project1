@@ -85,10 +85,8 @@ $(document).ready(function() {
                     (address.street_line_2
                       ? address.street_line_2 + "<br>"
                       : "") +
-                    address.city +
-                    ", " +
-                    address.state_code +
-                    " " +
+                    (address.city ? address.city + ", " : "") +
+                    (address.state_code ? address.state_code + " " : "") +
                     (address.postal_code ? address.postal_code : "") +
                     (address.zip4 ? "-" + address.zip4 : "")
                 );
@@ -122,7 +120,6 @@ $(document).ready(function() {
     .orderByChild("dateAdded")
     .limitToLast(10)
     .on("child_added", function(childSnapshot) {
-
       var phoneNumber = childSnapshot.val().reversePhone.phone_number;
       var category =
         childSnapshot.val().phoneReputation.reputation_details &&
