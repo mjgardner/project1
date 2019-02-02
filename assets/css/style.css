@@ -1,4 +1,6 @@
-#reputation-level-info-icon, #category-type-info-icon, #report-score-info-icon{
+#reputation-level-info-icon,
+#category-type-info-icon,
+#report-score-info-icon {
   text-decoration: none;
 }
 
@@ -12,10 +14,8 @@
 }
 
 #info-heading {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
-
-
 
 #category-type-info {
   display: none;
@@ -26,9 +26,10 @@
   margin-bottom: 3px;
 }
 
-#info-headings, #report-score{
-    font-size: large;
-    font-weight: 600;
+#info-headings,
+#report-score {
+  font-size: large;
+  font-weight: 600;
 }
 
 #report-score-display,
@@ -46,15 +47,15 @@
   margin-left: 325px;
 }
 
-#category-type-info{
-    display: none;
-} 
-#title {
-    position: relative;
-    top: -32px; 
+#category-type-info {
+  display: none;
 }
-#report-score-info{
-    display: none;
+#title {
+  position: relative;
+  top: -32px;
+}
+#report-score-info {
+  display: none;
 }
 
 .jumbotron {
@@ -85,17 +86,16 @@
   width: 100%;
 }
 
-#address-column{
-    background-color: white;
+#address-column {
+  background-color: white;
 }
 
 #volume-score-column {
   background-color: lightskyblue;
 }
 
-
-#report-score-column{
-    background-color: white;
+#report-score-column {
+  background-color: white;
 }
 
 #score-column {
@@ -155,10 +155,10 @@ footer {
 }
 
 .card-one {
-    border: none;
+  border: none;
 }
 
 #report-score-display {
-    width: 100;
-    margin-left: 485;
+  width: 100;
+  margin-left: 485;
 }
