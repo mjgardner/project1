@@ -45,8 +45,6 @@ $(document).ready(function() {
           method: "GET",
           success: function(response) {
             results["phoneReputation"] = response;
-            console.log(results);
-
             results.dateAdded = firebase.database.ServerValue.TIMESTAMP;
             database.ref().push(results);
 
@@ -55,16 +53,12 @@ $(document).ready(function() {
             var reputationScore = response.reputation_details.score;
 
             $("#reputation-level-display").html(reputationLevel + "/4");
-            console.log(reputationLevel);
             $("#report-score-display").html(reputationScore + "/100");
-            console.log(reputationScore);
 
             if (categoryType === null) {
               $("#category-type-display").html("None");
-              console.log("None");
             } else {
               $("#category-type-display").html(categoryType);
-              console.log(categoryType);
             }
 
             function colorDiv() {
@@ -128,7 +122,6 @@ $(document).ready(function() {
     .orderByChild("dateAdded")
     .limitToLast(10)
     .on("child_added", function(childSnapshot) {
-      console.log(childSnapshot.val());
 
       var phoneNumber = childSnapshot.val().reversePhone.phone_number;
       var category =
@@ -139,8 +132,6 @@ $(document).ready(function() {
         childSnapshot.val().phoneReputation.reputation_details &&
         childSnapshot.val().phoneReputation.reputation_details.score;
       var dateAdded = dayjs(childSnapshot.val().dateAdded).format("MMM D YYYY");
-
-      console.log(phoneNumber, category, repLevel, repScore, dateAdded);
 
       var newRow = $("<tr>").append(
         $("<td>").text(dateAdded),
@@ -169,7 +160,6 @@ $(document).ready(function() {
   // create a function to hide and display information when info icon is pressed
   $("#reputation-level-info-icon").on("click", function() {
     var x = document.getElementById("reputation-level-info");
-    // console.log(x.style)
     if (x.style.display === "none" || !x.style.display) {
       x.style.display = "block";
     } else {
@@ -179,7 +169,6 @@ $(document).ready(function() {
   // create a function to hide and display information when info icon is pressed
   $("#category-type-info-icon").on("click", function() {
     var x = document.getElementById("category-type-info");
-    // console.log(x.style)
     if (x.style.display === "none" || !x.style.display) {
       x.style.display = "block";
     } else {
@@ -189,7 +178,6 @@ $(document).ready(function() {
   // create a function to hide and display information when info icon is pressed
   $("#report-score-info-icon").on("click", function() {
     var x = document.getElementById("report-score-info");
-    // console.log(x.style)
     if (x.style.display === "none" || !x.style.display) {
       x.style.display = "block";
     } else {
