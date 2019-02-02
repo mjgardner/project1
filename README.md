@@ -14,3 +14,14 @@ solve this problem by providing a means to look up the location and reputation
 of any given 10-digit US phone number. We do this by displaying a search box,
 a map, address (when possible), various reputation metrics, and a list of
 recent searches.
+
+APIs used:
+- Google Firebase
+- Google Maps
+- Whitepages Pro Phone Reputation
+- Whitepages Pro Reverse Phone
+
+Libraries used:
+- Bootstrap
+- Day.js
+- jQuery
